@@ -33,7 +33,7 @@
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ mensaje: texto })
+        body: JSON.stringify({ mensaje })
       });
       const data = await res.json();
       agregarMensaje('bot', data.respuesta);

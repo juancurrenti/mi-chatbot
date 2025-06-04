@@ -1,7 +1,6 @@
 {
   "name": "mi-chatbot",
   "version": "1.0.0",
-  "main": "index.js",
   "type": "commonjs",
   "dependencies": {
     "openai": "^4.0.0"

@@ -2,14 +2,13 @@
 const { OpenAI } = require("openai");
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY
 });
 
 module.exports = async (req, res) => {
   if (req.method !== "POST") return res.status(405).end();
 
   const { mensaje } = req.body;
-
   if (!mensaje) {
     return res.status(400).json({ error: "Falta el mensaje" });
   }
@@ -21,10 +20,11 @@ module.exports = async (req, res) => {
         {
           role: "system",
           content:
-            "Eres un asistente amigable que responde en español de forma clara y humana.",
+            "Eres un asistente amigable que responde en español de forma clara y humana."
         },
-        { role: "user", content: mensaje },
+        { role: "user", content: mensaje }
       ],
+      temperature: 0.7
     });
 
     const respuesta = completion.choices[0].message.content.trim();

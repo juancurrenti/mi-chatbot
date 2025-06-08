@@ -4,6 +4,7 @@
   "type": "commonjs",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "groq-sdk": "^0.23.0",
     "openai": "^4.0.0"
   }
 }
